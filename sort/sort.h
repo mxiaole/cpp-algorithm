@@ -18,4 +18,6 @@ void insertSort1(int *arr, int n);
 
 void insertSort2(int *arr, int n);
 
+void mergeSort(int *arr, int n);
+
 #endif //ALGORITHM_SORT_H
