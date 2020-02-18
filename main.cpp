@@ -32,8 +32,10 @@ void testString() {
 //    reverseWords("hello world");
 //    int res = LongestCommonStr("abcde", "bebc");
 //    std::cout << res << std::endl;
-    int res = longestCommonSubstr("abcde", "bebc");
-    std::cout << res << std::endl;
+//    int res = longestCommonSubstr("abcde", "bebc");
+//    std::cout << res << std::endl;
+//    std::cout << isPalindrome("abcbba") << std::endl;
+    AddStr("123", "3457");
 }
 
 int main() {

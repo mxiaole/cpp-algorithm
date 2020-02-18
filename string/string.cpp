@@ -148,3 +148,53 @@ int longestCommonSubstr(std::string s1, std::string s2) {
     return dp[s1.size() - 1][s2.size() - 1];
 
 }
+
+bool isPalindrome(std::string str) {
+    int i = 0;
+    int j = str.size() - 1;
+
+    while (i < j) {
+        if (str[i] != str[j]) {
+            return false;
+        }
+        i++;
+        j--;
+    }
+
+
+    return true;
+}
+
+// 大数加法
+void AddStr(std::string s1, std::string s2) {
+    int length1 = s1.size() - 1;
+    int length2 = s2.size() - 1;
+
+    int p = 0;  // 两个数相加的进位数
+
+    std::string res = "";
+
+    while (length2 >= 0 && length1 >= 0) {
+        res += ((s1[length1] - '0' + s2[length2] - '0' + p) % 10 + '0');
+        p = (s1[length1] - '0' + s2[length2] - '0') / 10;
+        length1--;
+        length2--;
+    }
+    while (length1 >= 0) {
+        res += ((s1[length1] - '0' + p) % 10 + '0');
+        p = (s1[length1] - '0' + p) / 10;
+        length1--;
+    }
+    while (length2 >= 0) {
+        res += ((s2[length2] - '0' + p) % 10 + '0');
+        p = (s2[length2] - '0' + p) / 10;
+        length2--;
+    }
+
+    std::cout << res << std::endl;
+}
+
+// 大数乘法
+void MultiStr(std::string s1, std::string s2) {
+
+}
