@@ -5,9 +5,10 @@
 #include "sort/sort.h"
 #include "sort/SortTestHelper.h"
 #include "Student.h"
+#include "string/string.h"
 
 
-int main() {
+void testSort() {
     int n = 10000;
     int *arr = SortTestHelper::generateRandomArray(n, 0, n);
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
@@ -23,6 +24,19 @@ int main() {
     delete[] arr;
     delete[] arr2;
     delete[] arr3;
+}
 
-    return 0;
+void testString() {
+//    convertNumToStr(45678);
+//    reverseStr("hello world");
+//    reverseWords("hello world");
+//    int res = LongestCommonStr("abcde", "bebc");
+//    std::cout << res << std::endl;
+    int res = longestCommonSubstr("abcde", "bebc");
+    std::cout << res << std::endl;
+}
+
+int main() {
+//     testsort();
+    testString();
 }
